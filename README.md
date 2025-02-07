@@ -1,50 +1,138 @@
-🏢 Connect 4 Game - Next.js + TypeScript
+### **📜 README.md – ScopeLabs Video Platform**  
 
-A web-based Connect 4 game built with Next.js, TypeScript, and Tailwind CSS.Two players can take turns in the same browser window, with the game state managed server-side.
+# **🎓 ScopeLabs Video Platform**  
+A simple **EdTech video platform** where users can:  
+✅ **Upload new educational videos**  
+✅ **Watch YouTube & MP4 videos**  
+✅ **Comment on videos in real-time**  
+✅ **Hosted live on [Vercel](https://scope-labs.vercel.app/)**  
 
-🚀 Features
+---
 
-✅ Two-player mode (Red vs Yellow)
-✅ Game state managed on the backend (via Next.js API routes)
-✅ Win & draw detection (horizontal, vertical, diagonal)
-✅ No database needed (state stored in memory)
+## **🚀 Live Demo**  
+🔗 **Vercel Deployment**: [Click here to view the app](https://scope-labs.vercel.app/)  
 
+---
 
-🛠 Setup & Installation
+## **🛠️ Features**
+- 🎥 **Upload & Watch Videos** – Supports **YouTube** (via embed) and **MP4 files**  
+- 💬 **Comment System** – Users can add & view comments on videos  
+- 📺 **Responsive Video Player** – Uses **iframes for YouTube** and **native video controls for MP4**  
+- 🏗 **Built with Next.js & Tailwind CSS** – Fast, modern, and mobile-friendly  
+- ☁ **Hosted on Vercel** – No setup required, just deploy instantly  
 
-1️⃣ Clone the Repository
+---
 
-git clone git@github.com:tomasdavid1/cotera.git
-cd cotera
+## **📌 How to Run Locally**
+### **1️⃣ Clone the Repository**
+```sh
+git clone git@github.com:tomasdavid1/scopeLabs.git
+cd scopeLabs
+```
 
-2️⃣ Install Dependencies
-
+### **2️⃣ Install Dependencies**
+```sh
 npm install
+```
+(Or use `yarn install` if you prefer Yarn)
 
-3️⃣ Start the Development Server
+### **3️⃣ Set Up Environment Variables**
 
-yarn dev
+```
+(Replace with your actual API URL)
 
-🛠 Open http://localhost:3000 to play the game.
+### **4️⃣ Run the Development Server**
+```sh
+npm run dev
+```
+Your app will be available at:  
+🔗 `http://localhost:3000`
 
-🎮 How to Play
+---
 
-1️⃣ Players take turns clicking on a column to drop a piece.
-2️⃣ The piece falls to the lowest available row in that column.
-3️⃣ The first player to connect 4 pieces in a row (horizontal, vertical, or diagonal) wins!
-4️⃣ If the board fills up without a winner, it's a draw.
-5️⃣ Click the Restart Game button to start a new match.
+## **📺 Video Support**
+- **YouTube Videos** – Automatically embedded via iframe  
+- **MP4 Videos** – Played using the native HTML `<video>` element  
+- **Google Drive Videos** – Requires special embedding (see below)  
 
+**How to Upload Google Drive Videos:**  
+1. **Get the file ID** from the link:  
+   ```
+   https://drive.google.com/file/d/FILE_ID/view
+   ```
+2. **Use this format in the app**:  
+   ```
+   https://drive.google.com/uc?export=download&id=FILE_ID
+   ```
 
-💡 Next Steps
+---
 
-- Animations: Add smooth drop animations for pieces.
+## **📂 Folder Structure**
+```
+scopeLabs/
+│── src/
+│   ├── components/        # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── pages/             # Next.js pages (index, upload, video details)
+│   ├── styles/            # Tailwind global styles
+│   ├── api/               # Backend API routes (Next.js server functions)
+│── public/                # Static assets
+│── .env.local             # Environment variables (API URLs)
+│── README.md              # You're reading it now! 📜
+│── next.config.js         # Next.js configuration
+│── tailwind.config.js     # Tailwind CSS configuration
+│── tsconfig.json          # TypeScript config
+│── package.json           # Dependencies and scripts
+```
 
-- Online gaming: Create webhooks to allow more than one player to play at once
+---
 
-- AI Opponent: Implement an AI mode for single-player games.
+## **🎥 Screenshots**
+📌 **Main Page**
+![Main Page Screenshot](https://your-image-url.com/main.png)
 
-- Winning Effect: Highlight the winning row/column.
+📌 **Video Player (YouTube)**
+![YouTube Video Screenshot](https://your-image-url.com/youtube.png)
 
-Contributions & feedback welcome! 🚀
+📌 **Comment Section**
+![Comment Section Screenshot](https://your-image-url.com/comments.png)
 
+---
+
+## **🛠 Tech Stack**
+| Technology | Purpose |
+|------------|---------|
+| **Next.js** | Frontend framework |
+| **Tailwind CSS** | Styling |
+| **React Hooks** | State management |
+| **Vercel** | Hosting |
+| **FastAPI** | Backend API |
+
+---
+
+## **🤝 Contributing**
+Want to contribute? Follow these steps:
+1. **Fork the repo**  
+2. **Create a new branch**  
+   ```sh
+   git checkout -b feature-new-video-player
+   ```
+3. **Make your changes and commit**  
+   ```sh
+   git commit -m "Added support for XYZ"
+   ```
+4. **Push the branch and open a PR**  
+   ```sh
+   git push origin feature-new-video-player
+   ```
+
+---
+
+---
+
+## **📝 License**
+This project is licensed under the **MIT License** – you're free to modify and use it as needed.
+
+---
+
+🚀 **Happy coding & enjoy the platform!** 🚀
