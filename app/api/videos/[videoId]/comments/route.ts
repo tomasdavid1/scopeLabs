@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 
 const API_URL = "https://take-home-assessment-423502.uc.r.appspot.com/videos"; // FastAPI Base URL
 
-export async function GET(request: NextRequest, { params }: { params: { videoId: string } }) {
+export async function GET(request: NextRequest) {
   try {
     const urlParts = request.nextUrl.pathname.split("/");
     const videoId = urlParts[urlParts.length - 2]; 
